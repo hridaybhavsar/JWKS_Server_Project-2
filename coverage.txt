@@ -1,0 +1,34 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.0, pytest-8.3.5, pluggy-1.5.0
+rootdir: /Users/hriday_1224/JWKS_Server_Project
+plugins: cov-6.0.0
+collected 4 items
+
+test_app.py ....                                                         [100%]
+
+=============================== warnings summary ===============================
+test_app.py::test_auth_valid
+test_app.py::test_expired_key
+  /Users/hriday_1224/JWKS_Server_Project/app.py:72: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    'iat': datetime.datetime.utcnow(),
+
+test_app.py::test_auth_valid
+test_app.py::test_expired_key
+  /Users/hriday_1224/JWKS_Server_Project/app.py:73: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=5),
+
+test_app.py::test_auth_valid
+test_app.py::test_expired_key
+  /Users/hriday_1224/JWKS_Server_Project/app.py:74: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    'nbf': datetime.datetime.utcnow()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+---------- coverage: platform darwin, python 3.13.0-final-0 ----------
+Name     Stmts   Miss  Cover
+----------------------------
+app.py      73      9    88%
+----------------------------
+TOTAL       73      9    88%
+
+======================== 4 passed, 6 warnings in 1.37s =========================
